@@ -1,4 +1,4 @@
-import HomeVideo from "../../assets/Trading Tips for Beginners 2024-08-11.mp4"
+
 
 function ResultsVideo() {
     return (
@@ -6,7 +6,7 @@ function ResultsVideo() {
          <div className=' flex flex-col items-center pb-20 bg-black text-white '>
             <h1 className='text-4xl font-bolder '>Smooth And Clear Shooting Results</h1>
             <p className='text-xs tracking-wider mb-6 text-center'>These flagship technologies open a world of cinematic possibilities  by reducing corners shake and <br/>ensuring smooth ultra HD vides.</p>
-            <video src={HomeVideo} className='bg-white w-[1000px] h-[400px] rounded-[50px] '></video>
+            <video src="" className='bg-white w-[1000px] h-[400px] rounded-[50px] '></video>
             <div className="flex items-center gap-6 mt-8 mb-4 border-b-2 border-lime-800 pl-4  ">
                 <p>RockeySteady 2.0</p>
                 <div className="border-b-2 border-lime-400 py-2 pr-4 rounded-sm">
