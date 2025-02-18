@@ -7,7 +7,7 @@ import { CiSearch } from "react-icons/ci";
 function Nav() {
     return (
         <>
-        <div className="fixed top-0 left-0 flex bg-black w-full h-[70px] justify-between items-center text-white px-20">
+        <div className="fixed z-20  top-0 left-0 flex bg-lime-900  bg-opacity-40 w-full h-[70px] justify-between items-center text-white px-20">
             <div className="w-[80px]"> 
                 <img src={Logo} alt="DeffComm Logo" />
             </div>

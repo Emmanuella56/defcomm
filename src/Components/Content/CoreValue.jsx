@@ -2,7 +2,7 @@ import React from 'react'
 
 function CoreValue() {
     return (
-        <div className='flex justify-between gap-10 bg-black h-[615px] py-20 pl-44'>
+        <div className='flex justify-between gap-10 bg-linear-gradientone h-[615px] py-20 pl-44'>
             
             <div className='flex flex-col col-reverse justify-center  border-l-2 border-lime-600 w-[750px]'>
                 <div className=' border-l-2 border-lime-600 pl-10 rounded-md  text-white' >

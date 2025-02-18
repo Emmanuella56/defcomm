@@ -3,7 +3,7 @@
 function ResultsVideo() {
     return (
         <>
-         <div className=' flex flex-col items-center pb-20 bg-black text-white '>
+         <div className=' flex flex-col items-center pb-20 bg-linear-gradient text-white '>
             <h1 className='text-4xl font-bolder '>Smooth And Clear Shooting Results</h1>
             <p className='text-xs tracking-wider mb-6 text-center'>These flagship technologies open a world of cinematic possibilities  by reducing corners shake and <br/>ensuring smooth ultra HD vides.</p>
             <video src="" className='bg-white w-[1000px] h-[400px] rounded-[50px] '></video>

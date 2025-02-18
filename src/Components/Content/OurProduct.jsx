@@ -2,11 +2,16 @@ import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 
 function OurProduct() {
     return (
-        <div className=' bg-black pb-6 '>
-             <h1 className='mx-auto text-center font-bolder text-[50px] text-white'>The Best Our Product</h1>
-             <p className='mx-auto text-center text-lg mt-2 text-gray-400 leading-6'>Products with advanced technology premium quality with <br/>various features.</p>
+        <div className="relative">
+        <div className="absolute top-[700px] left-[250px] font-bold text-[250px] text-stone-600 rotate-90 opacity-10 ">
+            DRONERLY
+        </div>
+        <div className=' bg-linear-gradienttwo pb-6 '>
+             <h1 className='mx-auto text-center font-bold text-[50px] text-white z-10'>The Best Our Product</h1>
+             <p className='mx-auto text-center text-lg mt-2 text-gray-400 leading-6 z-10'>Products with advanced technology premium quality with <br/>various features.</p>
                         
-            <div className=' flex  pt-10 '>
+            <div className=' flex  pt-10 z-10'>
+               
                 <div className='bg-gray-200 w-full h-[400px]'>
 
                 </div>
@@ -22,7 +27,7 @@ function OurProduct() {
                 </div>
             </div>
 
-            <div className=' flex  pt-10 '>
+            <div className=' flex  pt-10 z-10'>
                 <div className='flex flex-col justify-center  w-full'>
                     <div className='  pl-20 rounded-md  text-white' >
                         <h1 className='text-lime-400 text-xl'>DR Motion Controller V.2</h1>
@@ -38,7 +43,7 @@ function OurProduct() {
                 </div>
             </div>
 
-            <div className=' flex pt-10 '>
+            <div className=' flex pt-10 z-10'>
                 <div className='bg-gray-200 w-full h-[400px]'>
 
                 </div>
@@ -53,11 +58,13 @@ function OurProduct() {
                 </div>
             </div>
 
-            <div className=' flex gap-4 items-center justify-center mx-auto mt-10 py-2 px-4 rounded-[100px] w-[150px] text-center my-8 text-black bg-lime-400 border border-lime-400 hover:bg-lime-600 cursor-pointer hover:text-white hover:scale-110  hover:transition delay-150 duration-300 ease-in-out '>
+            <div className=' flex gap-4 items-center justify-center mx-auto mt-10 py-2 px-4 rounded-[100px] w-[150px] text-center my-8 text-black bg-lime-400 border border-lime-400 hover:bg-lime-600 cursor-pointer hover:text-white hover:scale-110  z-10 hover:transition delay-150 duration-300 ease-in-out '>
                 View All
                 <LiaLongArrowAltRightSolid />
             </div>
         </div>
+        </div>
+        
     )
 }
 
