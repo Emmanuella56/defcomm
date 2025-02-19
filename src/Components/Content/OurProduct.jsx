@@ -3,7 +3,7 @@ import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 function OurProduct() {
     return (
         <div className="relative">
-        <div className="absolute top-[700px] left-[250px] font-bold text-[250px] text-stone-600 rotate-90 opacity-10 ">
+        <div className="absolute top-[700px] left-[180px] font-bold text-[250px] text-stone-600 rotate-90 opacity-10 ">
             DRONERLY
         </div>
         <div className=' bg-linear-gradienttwo pb-6 '>

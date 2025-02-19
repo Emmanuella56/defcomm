@@ -117,24 +117,15 @@ function Home() {
 
 
 
-    //   useEffect(() => {
-    //     const VectorMoveDown = () => {
-    //       const scrollY = window.scrollY;
-    //       setTop(90 + scrollY)
-    //     };
-    
-    //     window.addEventListener("scroll", VectorMoveDown);
-    //     return () => window.removeEventListener("scroll", VectorMoveDown);
-    //   }, []);
 
 
 
 
     return (
-        <div className="pt-[160px]  bg-linear-gradient  ">
-            <div className='relative text-white  h-[635px] pl-[160px] '>
-                <img src={deffcommhomeimage} alt="DeffComm HomeImage" className='h-[635px]' />
-                <div className='absolute bottom-[20px] w-[800px] left-[20px] '>
+        <div className="pt-[155px]  bg-linear-gradient  ">
+            <div className='relative text-white  h-[550px] pl-[160px] '>
+                <img src={deffcommhomeimage} alt="DeffComm HomeImage" className='h-[550px]' />
+                <div className='absolute bottom-[2px]  left-[20px] '>
                     <SvgFive />
                 </div>
 
@@ -148,7 +139,7 @@ function Home() {
                 </div>
                 
                 <div
-                className="absolute right-[280px] transition-all duration-300"
+                className="absolute right-[220px] transition-all duration-300"
                 style={{ bottom: `${bottomTwo}px` }}
                 >
                     <SvgTwo/>
@@ -157,7 +148,7 @@ function Home() {
                 </div>
 
                 <div
-                className="absolute left-[400px] transition-all duration-50"
+                className="absolute left-[320px] transition-all duration-50"
                 style={{ top: `${top}px` }}
                 >
                 <p className="pb-4">Killer Switch</p>
