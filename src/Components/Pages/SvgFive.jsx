@@ -2,7 +2,8 @@ import React from 'react'
 
 function SvgFive() {
     return (
-        <svg width="600" height="500" viewBox="0 0 674 505" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className='md:w-[600px] md:h-[500px]'>
+        <svg width="full" height="full" viewBox="0 0 674 505" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.57617 0.265625V504.97M169.531 0.265625V504.97M337.486 0.265625V504.97M505.441 0.265625V504.97M673.396 168.22L2.62131 168.22M673.396 336.175H2.62131" stroke="white" stroke-opacity="0.24"/>
 <rect x="337.352" y="211.367" width="167.955" height="167.955" fill="white" fill-opacity="0.08"/>
 <rect x="169.531" y="336.176" width="167.955" height="167.955" fill="white" fill-opacity="0.08"/>
@@ -27,6 +28,7 @@ function SvgFive() {
 </linearGradient>
 </defs>
 </svg>
+</div>
 
     )
 }

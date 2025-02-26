@@ -38,5 +38,10 @@
     
   }
   }
-  
-  /* @import 'node_modules/scroll-carousel/dist/scroll.carousel.css'; */
+
+  @Layer base {
+    @font-face{
+        font-family: 'Poppins';
+        src: local('Poppins'), url(./fonts/Poppins-Medium.ttf) format('truetype');
+      }
+}

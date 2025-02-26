@@ -114,23 +114,37 @@ function Home() {
         
 
 
+      const images = [NavyLogo, RedBlack, RedBlackTwo, RedBlackThree, SarsLogo];
 
-
+      
+        const [index, setIndex] = useState(0);
+      
+        // Auto-slide every 3 seconds
+        useEffect(() => {
+          const interval = setInterval(() => {
+            setIndex((prev) => (prev + 1) % images.length);
+          }, 3000);
+          
+          return () => clearInterval(interval); // Cleanup function
+        }, []);
 
 
 
 
 
     return (
-        <div className="pt-[155px]  bg-linear-gradient  ">
-            <div className='relative text-white  h-[550px] pl-[160px] '>
-                <img src={deffcommhomeimage} alt="DeffComm HomeImage" className='h-[550px]' />
-                <div className='absolute bottom-[2px]  left-[20px] '>
+      <>
+        
+        <div className="relative md:pt-[155px] pt-[100px] bg-linear-gradient  md:overflow-none w-full  ">
+        <div className="md:hidden absolute pt-[180px]  w-[400px]"><SvgFive /></div>
+            <div className='relative text-white -ml-[240px] md:ml-[0px] h-[500px] md:h-[550px] md:pl-[100px] '>
+                <img src={deffcommhomeimage} alt="DeffComm HomeImage" className='h-[500px]  md:h-[550px] ' />
+                <div className='hidden md:flex absolute bottom-[2px]  md:left-[20px] '>
                     <SvgFive />
                 </div>
 
                 <div
-                className="absolute text-white left-[220px] transition-all duration-300"
+                className="hidden md:block absolute text-white  md:left-[200px] transition-all duration-300"
                 style={{ bottom: `${bottom}px` }}
                 >
                     <SvgOne />
@@ -139,7 +153,7 @@ function Home() {
                 </div>
                 
                 <div
-                className="absolute right-[220px] transition-all duration-300"
+                className="hidden md:block absolute md:right-[0px] right-[420px] transition-all duration-300"
                 style={{ bottom: `${bottomTwo}px` }}
                 >
                     <SvgTwo/>
@@ -148,31 +162,31 @@ function Home() {
                 </div>
 
                 <div
-                className="absolute left-[320px] transition-all duration-50"
+                className="hidden md:block absolute md:left-[300px] transition-all duration-50"
                 style={{ top: `${top}px` }}
                 >
-                <p className="pb-4">Killer Switch</p>
+                <p className="pb-4 ">Killer Switch</p>
                 <SvgThree />
                 </div>
                
                 
                 <div
-                className="absolute top-6 right-40 text-white"
+                className="absolute -top-[15px] right-4 md:top-6 md:right-40 text-white"
                 // Apply the rotation to the container div
                 style={{ transform: `rotate(${rotation}deg)`, transition: 'transform 0.1s linear' }}
                 >
-                <div className="relative w-[80px] h-[80px]  flex items-center justify-center bg-lime-800 text-white text-4xl rounded-full" >
-                    <p className="bg-black p-1 rounded-full"  >
+                <div className="relative w-[70px] h-[70px] md:w-[80px]  md:h-[80px] flex items-center justify-center  bg-lime-800 text-white text-4xl rounded-full" >
+                    <p className="bg-black p-1 rounded-full text-[18px]"  >
                     <LiaLongArrowAltDownSolid />
                     </p>
 
-                    {/* Removed the animate-rotate class so the svg doesn't spin on its own */}
+                    
                     <svg className="absolute w-[65px] h-[65px] " viewBox="0 0 200 200">
                     <defs>
                         <path id="textPath" d="M 100, 10 A 85,85 0 1,1 99,10" fill="transparent" />
                     </defs>
-                    <text className="text-xl font-bold tracking-[6px] fill-black font-bold">
-                        <textPath href="#textPath" startOffset="50%" textAnchor="middle">
+                    <text className="text-sm md:text-xl  font-bold tracking-[6px] fill-black font-bold">
+                        <textPath href="#textPath" startOffset="50%" textAnchor="middle" >
                         EXPLORE MORE     SCROLL DOWN     
                         </textPath>
                     </text>
@@ -181,20 +195,25 @@ function Home() {
                 </div>
             </div>
 
-            <div className='flex gap-60 items-center bg-gray-950   py-1 pl-10  '>
-                <div className="flex items-center gap-6">
-                   <p className="text-white p-4 border rounded-[50%] w-[50px]"><RxDoubleArrowDown /></p> 
-                   <p className="text-white text-xl w-[200px]">BRAND'S DIGITAL IDENTITY</p>
+            <div className='flex gap-4 md:gap-60 items-center bg-gray-950 py-1 md:pl-10  '>
+                <div className="flex items-center gap-2 md:gap-6">
+                   <p className="text-white p-2 md:p-4 border rounded-[50%] md:w-[50px]"><RxDoubleArrowDown /></p> 
+                   <p className="text-white text-sm md:text-xl  w-[60px] md:w-[200px]">BRAND'S DIGITAL IDENTITY</p>
                 </div>
-                <div className=" flex justify-center gap-10 items-center z-40">
-                    <img src={NavyLogo} alt="Logo1" className="my-slide h-[60px] w-[60px]" />
-                    <img src={RedBlack} alt="logo2" className="my-slide  h-[60px] w-[90px]" />
-                    <img src={RedBlackTwo} alt="Logo3" className="my-slide  h-[60px] w-[80px]" />
-                    <img src={RedBlackThree} alt="Logo4" className="my-slide  h-[60px] w-[60px]" />
-                    <img src={SarsLogo} alt="Logo5" className="my-slide  h-[60px] w-[60px]"/>
-                </div>
+
+                <div className="relative w-[200px] h-[80px] overflow-hidden">
+                    <div
+                      className="flex transition-transform duration-700 ease-in-out"
+                      style={{ transform: `translateX(-${index * 100}%)` }}
+                    >
+                      {images.map((img, i) => (
+                        <img key={i} src={img} alt={`Logo ${i + 1}`} className="h-[80px] w-[80px] flex-shrink-0" />
+                      ))}
+                    </div>
+                  </div>
             </div>
         </div>
+        </>
     )
 }
 
