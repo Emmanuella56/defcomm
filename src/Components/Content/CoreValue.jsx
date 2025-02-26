@@ -2,9 +2,9 @@ import React from 'react'
 
 function CoreValue() {
     return (
-        <div className='grid grid-row-2 h-[700px] font-[poppins] md:flex md:justify-between w-[100%]  md:gap-10 bg-linear-gradientone md:h-[615px] py-20 md:pl-20'>
+        <div className='grid grid-row-2 h-[700px] font-[poppins] md:flex md:justify-between   md:gap-10 bg-linear-gradientone md:h-[615px] py-20 md:pl-20'>
             
-            <div className='flex flex-col col-reverse justify-center  border-l-2 border-lime-600 w-[750px]'>
+            <div className='flex flex-col col-reverse justify-center  border-l-2 border-lime-600'>
                 <div className=' border-l-2 border-lime-600 p-6 md:p-0 rounded-md  text-white' >
                     <h1 className='text-gray-400 text-2xl  '>Why Choose Us?</h1>
                     <br/>
@@ -15,7 +15,7 @@ function CoreValue() {
                 </div>
             </div>
 
-            <div className='bg-white h-[300px] w-[650px]  md:w-[650px] md:h-full'>
+            <div className='bg-white h-[300px]  md:w-[650px] md:h-full'>
 
             </div>
         </div>

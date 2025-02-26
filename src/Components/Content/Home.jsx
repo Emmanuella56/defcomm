@@ -12,7 +12,7 @@ import SvgThree from "../Pages/SvgThree.jsx"
 import SvgFour from "../Pages/SvgFour.jsx";
 import SvgFive from "../Pages/SvgFive.jsx";
 import React, { useEffect, useRef, useState } from 'react';
-
+import { motion } from "motion/react"
 
 function Home() {
 
@@ -135,8 +135,8 @@ function Home() {
     return (
       <>
         
-        <div className="relative md:pt-[155px] pt-[100px] bg-linear-gradient  md:overflow-none w-full  ">
-        <div className="md:hidden absolute pt-[180px]  w-[400px]"><SvgFive /></div>
+        <div className="relative md:pt-[155px] pt-[100px] bg-linear-gradient md:overflow-none w-full  ">
+        <div className="md:hidden absolute pt-[180px]"><SvgFive /></div>
             <div className='relative text-white -ml-[240px] md:ml-[0px] h-[500px] md:h-[550px] md:pl-[100px] '>
                 <img src={deffcommhomeimage} alt="DeffComm HomeImage" className='h-[500px]  md:h-[550px] ' />
                 <div className='hidden md:flex absolute bottom-[2px]  md:left-[20px] '>
@@ -161,13 +161,13 @@ function Home() {
                     <p>Cryptographic Fuctions, Secure Key Storage</p>
                 </div>
 
-                <div
+                <motion.div
                 className="hidden md:block absolute md:left-[300px] transition-all duration-50"
                 style={{ top: `${top}px` }}
                 >
                 <p className="pb-4 ">Killer Switch</p>
                 <SvgThree />
-                </div>
+                </motion.div>
                
                 
                 <div

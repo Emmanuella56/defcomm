@@ -15,7 +15,7 @@ function App() {
     <Home />
     <CoreValue />
     <ResultsVideo />
-    <OurProduct />
+    <OurProduct /> 
     <Footer />
     </>
   )
